@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.davidgu.nds_project4.DisplayMessageActivity">
+
+    <Button
+        android:id="@+id/image_gallery"
+        android:layout_width="86dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="18dp"
+        android:layout_marginTop="16dp"
+        android:onClick="select_from_gallery"
+        android:text="find image"
+        app:layout_constraintBottom_toTopOf="@+id/image_container"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_container"
+        android:layout_width="195dp"
+        android:layout_height="111dp"
+        android:layout_marginBottom="48dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/image_description"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_gallery"
+        app:srcCompat="@drawable/common_full_open_on_phone" />
+
+    <EditText
+        android:id="@+id/image_description"
+        android:layout_width="253dp"
+        android:layout_height="74dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="19dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/image_public"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_container" />
+
+    <CheckBox
+        android:id="@+id/image_public"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:text="public_image"
+        app:layout_constraintBottom_toTopOf="@+id/upload_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_description" />
+
+    <Button
+        android:id="@+id/upload_button"
+        android:layout_width="219dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="8dp"
+        android:text="upload"
+        app:layout_constraintBottom_toTopOf="@+id/search_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_public"/>
+
+    <Button
+        android:id="@+id/search_button"
+        android:layout_width="172dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="8dp"
+        android:text="Search"
+        app:layout_constraintBottom_toTopOf="@+id/progress_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/upload_button" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="190dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_button"/>
+
+
+
+
+
+
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>
